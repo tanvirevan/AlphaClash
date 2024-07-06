@@ -14,7 +14,24 @@ function setBackgroundColorById(elementId)
         const element = document.getElementById(elementId)
         element.classList.add('bg-orange-400');
     }
+function removeBackgroundColorById(elementId)
+    {
+        const element = document.getElementById(elementId);
+        element.classList.remove('bg-orange-400');
+    }
 
+function getElementTextById(elementId)
+    {
+        const element = document.getElementById(elementId);
+        elementValue = parseInt(element.innerText);
+        return elementValue;
+    }
+
+function setElementTextById(elementId,value)
+    {
+        const element = document.getElementById(elementId)
+        element.innerText = value;
+    }
 function getARandomAlphabet()
     {
         // get or Create an alphabet array
