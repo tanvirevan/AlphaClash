@@ -2,7 +2,6 @@
 function handleKeyboardButtonPress(event)
     {
         const playerPressed = event.key;
-        console.log(event.key);
 
 
         const currentAlphabetElement = document.getElementById('current-alphabet');
@@ -66,6 +65,17 @@ function play()
         showElementById('play-ground');
         continueGame();
     }
+
+document.getElementById('playNow').addEventListener('keydown', function(event){
+        if(event.key === 'Enter')
+            {
+                play();
+            }
+    });
+    
+document.getElementById('playNow').addEventListener('click', play);
+
+
 function gameOver()
     {
         hideElementById('play-ground');
